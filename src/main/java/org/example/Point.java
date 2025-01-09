@@ -1,10 +1,15 @@
 package org.example;
 
 public class Point {
-   private int x;
-   private int y;
+   private static int x;
+   private static int y;
 
-   public Point(int x,int y){
-
+   public  Point(int x,int y){
+         Point.x=x;
+         Point.y=y;
    }
+   public static void setPoint(){
+
+    }
+
 }
