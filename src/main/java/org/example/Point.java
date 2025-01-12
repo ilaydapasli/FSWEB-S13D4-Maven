@@ -31,10 +31,11 @@ public class Point {
 
     // 2. Overloaded distance(Point p): Verilen bir Point'e uzaklığı hesaplar
     public double distance(Point p) {
-        int dx = p.getX() - this.x;
-        int dy = p.getY() - this.y;
+        double dx = this.x - p.getX();
+        double dy = this.y- p.getY() ;
         return Math.sqrt(dx * dx + dy * dy);
     }
+
 
     // 3. Overloaded distance(int a, int b): Verilen (a,b) noktasına uzaklığı hesaplar
     public double distance(int a, int b) {

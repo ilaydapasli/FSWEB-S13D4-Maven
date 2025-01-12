@@ -1,7 +1,7 @@
 package org.example;
 
 public class Player {
-    private final String name;
+    private  String name;
     private int healthPercentage;
     private Weapon weapon;
 
@@ -23,6 +23,7 @@ public class Player {
         this.healthPercentage-=damage;
         if (healthPercentage<0){
             System.out.println(name + " player has been knocked out of game");
+            this.healthPercentage=0;
         }
 
     }
