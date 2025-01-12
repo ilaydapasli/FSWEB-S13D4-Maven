@@ -1,13 +1,17 @@
 package org.example;
 
 public class Point {
-   private static int x;
-   private static int y;
+    // x ve y instance değişkenleri olmalı (static olmamalı)
+    private int x;
+    private int y;
 
-   public  Point(int x,int y){
-         Point.x=x;
-         Point.y=y;
-   }
+    // Constructor
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // Getter ve Setter metodları (setter'lar private olmalı)
     public int getX() {
         return x;
     }
@@ -31,11 +35,10 @@ public class Point {
 
     // 2. Overloaded distance(Point p): Verilen bir Point'e uzaklığı hesaplar
     public double distance(Point p) {
-        double dx = this.x - p.getX();
-        double dy = this.y- p.getY() ;
+        int dx = this.x - p.getX();
+        int dy = this.y - p.getY();
         return Math.sqrt(dx * dx + dy * dy);
     }
-
 
     // 3. Overloaded distance(int a, int b): Verilen (a,b) noktasına uzaklığı hesaplar
     public double distance(int a, int b) {
@@ -43,5 +46,4 @@ public class Point {
         int dy = b - this.y;
         return Math.sqrt(dx * dx + dy * dy);
     }
-
 }
